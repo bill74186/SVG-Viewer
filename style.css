@@ -1,0 +1,38 @@
+:root{--bg:#f5f6f8;--card:#fff;--text:#111827;--text2:#6b7280;--border:#e5e7eb;--accent:#7952b3}
+.dark{--bg:#121212;--card:#1e1e1e;--text:#f3f4f6;--text2:#9ca3af;--border:#374151}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif;transition:.2s ease}
+body{background:var(--bg);color:var(--text);padding:20px;max-width:1600px;margin:0 auto;min-height:100vh}
+header{margin-bottom:32px}
+.h-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:16px}
+h1{font-size:clamp(22px,5vw,34px);font-weight:700;flex-shrink:0}
+.t-bar{display:flex;align-items:center;flex-wrap:nowrap;justify-content:flex-end}
+.t-btn{height:44px;padding:0 16px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-size:15px;margin-left:10px}
+.t-btn:first-child{margin-left:8px}
+.t-btn:hover{border-color:var(--accent);background:rgba(121,82,179,.08);transform:translateY(-1px)}
+.t-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.search{width:100%;padding:16px 20px;border:2px solid var(--border);border-radius:16px;font-size:16px;outline:none;background:var(--card);color:var(--text)}
+.search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(121,82,179,.15)}
+.cnt{color:var(--text2);font-size:15px;margin-top:12px}
+main{display:grid;grid-template-columns:repeat(auto-fill,minmax(115px,1fr));gap:14px}
+.item{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 8px;text-align:center;cursor:pointer}
+.item:hover{border-color:var(--accent);box-shadow:0 6px 16px rgba(0,0,0,.08);transform:translateY(-2px)}
+.item svg{width:40px;height:40px;margin-bottom:10px;fill:currentColor}
+.nm{font-size:13px;color:var(--text2);line-height:1.3}
+.m{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:rgba(0,0,0,.4);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;justify-content:center;align-items:center;z-index:999;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.m.show{opacity:1;visibility:visible}
+.m-box{background:var(--card);padding:28px;border-radius:20px;width:calc(100% - 48px);max-width:600px;max-height:85vh;display:flex;flex-direction:column;gap:24px;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3);transform:scale(.9);transition:transform .3s}
+.m.show .m-box{transform:scale(1)}
+.m-hd{font-size:24px;font-weight:700;text-align:center;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.m-sec{display:flex;flex-direction:column;gap:10px}
+.m-lab{font-size:14px;font-weight:600;color:var(--text2);padding-left:4px}
+.m-pre{display:flex;justify-content:center;align-items:center;padding:40px;border:1px solid var(--border);border-radius:12px;background:rgba(0,0,0,.03)}
+.m-pre svg{width:140px;height:140px}
+textarea{width:100%;min-height:200px;max-height:280px;padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(0,0,0,.03);color:var(--text);resize:none;overflow-y:auto;font-family:monospace;font-size:13px;line-height:1.5;white-space:pre-wrap}
+.m-ft{padding-top:16px;border-top:1px solid var(--border)}
+.btn{width:100%;padding:14px;border:none;border-radius:12px;background:var(--accent);color:#fff;cursor:pointer;font-size:16px;font-weight:500}
+.top-btn{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:var(--card);border:1px solid var(--border);color:var(--text);display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(10px);z-index:99;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.top-btn.show{opacity:1;visibility:visible;transform:translateY(0)}
+.top-btn:hover{border-color:var(--accent);background:rgba(121,82,179,.08)}
+.top-btn .bi{font-size:22px}
+@media(max-width:600px){main{grid-template-columns:repeat(auto-fill,minmax(95px,1fr));gap:12px}.t-btn{height:40px;padding:0 12px;font-size:13px}.top-btn{width:42px;height:42px;right:16px;bottom:16px}}
+@media(max-width:400px){.h-top{flex-direction:column;align-items:flex-start;gap:12px}.t-bar{width:100%;justify-content:flex-start;flex-wrap:wrap}}
