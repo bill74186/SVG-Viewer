@@ -1,7 +1,9 @@
 <div align="center">
 
+<img src="/favicon.ico" width="25%" height="25%">
+
 # SVG-Viewer
-jieshaowenben
+A project where you can view SVG icons offline
 
 <p>
   <a href="https://github.com/bill74186/SVG-Viewer/stargazers"><img src="https://img.shields.io/github/stars/bill74186/SVG-Viewer?style=for-the-badge&logo=github&color=f4c542" alt="Stars"></a>
